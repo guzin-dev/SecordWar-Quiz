@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>Quiz</title>
+</head>
+
+<body>
+  <p id="questionHandler" class="remove">1/5</p>
+  <div class="index" id="first">
+    <h1>Segunda Guerra Mundial</h1>
+    <h3>Quiz</h3>
+    <button onclick="initGame()" class="myButton">Iniciar</button>
+  </div>
+  <div class="difSelector remove" id="second">
+    <h1>Selecione a dificuldade</h1>
+    <div class="alignButton">
+      <button class="myButton" onclick="chooseDif('easy')">Fácil</button>
+      <button class="myButton" onclick="chooseDif('medium')">Médio</button>
+      <button class="myButton" onclick="chooseDif('hard')">Difícil</button>
+    </div>
+  </div>
+  <div class="index remove" id="game">
+    <h1>Segunda Guerra Mundial</h1>
+    <h3 id="difHandler">Dificuldade - Fácil</h3>
+    <section>
+      <h4 id="questionTitle">Qual foi o evento que marcou o início da Segunda Guerra Mundial?</h4>
+      <div id="question1">
+        <button class="myButton" onclick="chooseQuestion('a')">a) O bombardeio de Pearl Harbor</button>
+        <button class="myButton" onclick="chooseQuestion('b')">b) A invasão da União Soviética pela Alemanha</button>
+        <button class="myButton" onclick="chooseQuestion('c')">c) O ataque à Polônia pela Alemanha nazista</button>
+        <button class="myButton" onclick="chooseQuestion('d')">d) A rendição da França para a Alemanha</button>
+      </div>
+      <div id="question2" class="remove">
+        <button class="myButton" onclick="chooseQuestion('a')">a) 1938</button>
+        <button class="myButton" onclick="chooseQuestion('b')">b) 1939</button>
+        <button class="myButton" onclick="chooseQuestion('c')">c) 1940</button>
+        <button class="myButton" onclick="chooseQuestion('d')">d) 1941</button>
+      </div>
+      <div id="question3" class="remove">
+        <button class="myButton" onclick="chooseQuestion('a')">a) Japão</button>
+        <button class="myButton" onclick="chooseQuestion('b')">b) Alemanha</button>
+        <button class="myButton" onclick="chooseQuestion('c')">c) Itália</button>
+        <button class="myButton" onclick="chooseQuestion('d')">d) União Soviética</button>
+      </div>
+      <div id="question4" class="remove">
+        <button class="myButton" onclick="chooseQuestion('a')">a) Batalha de Stalingrado</button>
+        <button class="myButton" onclick="chooseQuestion('b')">b) Batalha de Midway</button>
+        <button class="myButton" onclick="chooseQuestion('c')">c) Batalha de Bulge</button>
+        <button class="myButton" onclick="chooseQuestion('d')">d) Batalha de Okinawa</button>
+      </div>
+      <div id="question5" class="remove">
+        <button class="myButton" onclick="chooseQuestion('a')">a) Ataque a Pearl Harbor</button>
+        <button class="myButton" onclick="chooseQuestion('b')">b) Invasão da Polônia</button>
+        <button class="myButton" onclick="chooseQuestion('c')">c) Bombardeio de Hiroshima</button>
+        <button class="myButton" onclick="chooseQuestion('d')">d) Queda de Paris para os nazistas</button>
+      </div>
+      <div id="question6" class="remove">
+        <button class="myButton" onclick="chooseQuestion('a')">a) Berlim</button>
+        <button class="myButton" onclick="chooseQuestion('b')">b) Moscou</button>
+        <button class="myButton" onclick="chooseQuestion('c')">c) Londres</button>
+        <button class="myButton" onclick="chooseQuestion('d')">d) Reims</button>
+      </div>
+      <div id="question7" class="remove">
+        <button class="myButton" onclick="chooseQuestion('a')">a) Joseph Stalin</button>
+        <button class="myButton" onclick="chooseQuestion('b')">b) Vladimir Lenin</button>
+        <button class="myButton" onclick="chooseQuestion('c')">c) Nikita Khrushchev</button>
+        <button class="myButton" onclick="chooseQuestion('d')">d) Mikhail Gorbachev</button>
+      </div>
+      <div id="question8" class="remove">
+        <button class="myButton" onclick="chooseQuestion('a')">a) Projeto Fat Man</button>
+        <button class="myButton" onclick="chooseQuestion('b')">b) Projeto Little Boy</button>
+        <button class="myButton" onclick="chooseQuestion('c')">c) Projeto Manhattan</button>
+        <button class="myButton" onclick="chooseQuestion('d')">d) Projeto Blitzkrieg</button>
+      </div>
+      <div id="question9" class="remove">
+        <button class="myButton" onclick="chooseQuestion('a')">a) Vitória japonesa</button>
+        <button class="myButton" onclick="chooseQuestion('b')">b) Vitória americana</button>
+        <button class="myButton" onclick="chooseQuestion('c')">c) Empate</button>
+        <button class="myButton" onclick="chooseQuestion('d')">d) Trégua negociada</button>
+      </div>
+      <div id="question10" class="remove">
+        <button class="myButton" onclick="chooseQuestion('a')">a) 1944</button>
+        <button class="myButton" onclick="chooseQuestion('b')">b) 1945</button>
+        <button class="myButton" onclick="chooseQuestion('c')">c) 1946</button>
+        <button class="myButton" onclick="chooseQuestion('d')">d) 1947</button>
+      </div>
+      <div id="question11" class="remove">
+        <button class="myButton" onclick="chooseQuestion('a')">a) Polônia</button>
+        <button class="myButton" onclick="chooseQuestion('b')">b) Áustria</button>
+        <button class="myButton" onclick="chooseQuestion('c')">c) Tchecoslováquia</button>
+        <button class="myButton" onclick="chooseQuestion('d')">d) Hungria</button>
+      </div>
+      <div id="question12" class="remove">
+        <button class="myButton" onclick="chooseQuestion('a')">a) O dia da rendição da Alemanha</button>
+        <button class="myButton" onclick="chooseQuestion('b')">b) O dia em que a União Soviética entrou na
+          guerra</button>
+        <button class="myButton" onclick="chooseQuestion('c')">c) O dia em que a Itália se rendeu</button>
+        <button class="myButton" onclick="chooseQuestion('d')">d) O dia do desembarque das forças aliadas na Normandia
+        </button>
+      </div>
+      <div id="question13" class="remove">
+        <button class="myButton" onclick="chooseQuestion('a')">a) Kamikaze</button>
+        <button class="myButton" onclick="chooseQuestion('b')">b) Banzai</button>
+        <button class="myButton" onclick="chooseQuestion('c')">c) Hirukaze</button>
+        <button class="myButton" onclick="chooseQuestion('d')">d) Yamasakura</button>
+      </div>
+      <div id="question14" class="remove">
+        <button class="myButton" onclick="chooseQuestion('a')">a) Berlim</button>
+        <button class="myButton" onclick="chooseQuestion('b')">b) Viena</button>
+        <button class="myButton" onclick="chooseQuestion('c')">c) Nuremberg</button>
+        <button class="myButton" onclick="chooseQuestion('d')">d) Varsóvia</button>
+      </div>
+      <div id="question15" class="remove">
+        <button class="myButton" onclick="chooseQuestion('a')">a) Heinrich Himmler</button>
+        <button class="myButton" onclick="chooseQuestion('b')">b) Joseph Goebbels</button>
+        <button class="myButton" onclick="chooseQuestion('c')">c) Adolf Hitler</button>
+        <button class="myButton" onclick="chooseQuestion('d')">d) Hermann Göring</button>
+      </div>
+    </section>
+  </div>
+  <div class="remove" id="endGame">
+    <h1>Fim de jogo</h1>
+    <h3 id="result">Você acertou 0/5</h3>
+  </div>
+  <div class="black"></div>
+</body>
+
+</html>

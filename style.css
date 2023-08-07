@@ -1,0 +1,121 @@
+@font-face {
+  font-family: Bebas;
+  src: url(BebasNeue-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./img/1323605.jpeg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.black {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: black;
+  opacity: 40%;
+  z-index: 0;
+}
+
+.index {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Bebas;
+  color: #FFF;
+}
+
+.myButton {
+  padding: 0.5rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 1rem;
+  background-color: transparent;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: #FFF 1px solid;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  text-decoration: none;
+}
+
+.myButton:hover {
+  opacity: 60%;
+}
+
+.myButton:active {
+  transform: scale(.9);
+}
+
+.alignButton {
+  display: flex;
+  flex-direction: column;
+}
+
+.remove {
+  display: none;
+}
+
+.difSelector {
+  z-index: 10;
+}
+
+#questionHandler {
+  position: absolute;
+  top: 1rem;
+  color: white;
+  font-family: Bebas;
+  z-index: 10;
+}
+
+.flex {
+  display: flex;
+}
+
+#endGame {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+h4 {
+  color: white;
+  font-weight: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+section {
+  text-align: center;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+section div {
+  display: flex;
+  flex-direction: column;
+}
